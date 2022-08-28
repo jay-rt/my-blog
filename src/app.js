@@ -13,7 +13,7 @@ app.use(express.json());
 
 const withDB = async (operations, res) => {
   try {
-    const client = await MongoClient.connect("mongodb://127.0.0.1:27017");
+    const client = await MongoClient.connect("mongodb://localhost:27017");
     console.log("Connected successfully to server");
 
     const db = client.db("my-blog");
